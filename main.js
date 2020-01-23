@@ -6,12 +6,16 @@ const containers = {
     projects: document.querySelector('.projects'),
 }
 
-function projectCard(name, url, description, languages){
+function projectCard(repoObject){
+    const { name, homepage, html_url, description, language } = repoObject
+    const url = homepage || html_url
+
     const projectCard = document.createElement('div')
     projectCard.className = 'project-card'
+
     projectCard.appendChild(createProjectNameElement(name, url))
     projectCard.appendChild(createProjectDescriptionElement(description))
-    projectCard.appendChild(createProjectLanguagesElement(languages))
+    projectCard.appendChild(createProjectLanguagesElement(language))
 
     return projectCard
 
@@ -36,22 +40,13 @@ function projectCard(name, url, description, languages){
         return p
     }
 
-    function createProjectLanguagesElement(languages) {
+    function createProjectLanguagesElement(language) {
         const p = document.createElement('p')
         p.className = 'project-language'
-        p.innerHTML = languages.join(', ')
+        p.innerHTML = language
 
         return p
     }
-}
-
-async function createProjectCardWithRepo(repo){
-    const { name, homepage = html_page, description, languages_url } = repo
-    const languages = await fetchApiData(languages_url)
-
-    const languagesArray = Object.keys(languages)
-    
-    return projectCard(name, homepage, description, languagesArray)
 }
 
 async function fetchApiData(url) {
@@ -91,8 +86,8 @@ async function fetchGithubApiAndUpdateContent(username){
 
         containers.projects.innerHTML = ''
         for(repo of repos){
-            const projectCard = await createProjectCardWithRepo(repo)
-            containers.projects.appendChild(projectCard)
+            const projectCardElement = projectCard(repo)
+            containers.projects.appendChild(projectCardElement)
         }
     }
 }
