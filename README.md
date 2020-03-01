@@ -1,16 +1,42 @@
 # Portfolio Generator
 
 Create a portfolio using your GitHub repositories!
-I made it from my github page check it [here](https://guilhermebalog.github.io)!
+I made it based on github page check it [here](https://guilhermebalog.github.io)!
 
 ## Usage
 
-So far, clone this repositorie using 
+[Open the website](http://balogportfoliogenerator.herokuapp.com/) and type your github username
+
+> Pro tip: you can type the username in the url `/portfolio/USERNAME`
+
+## Contributing
+
+### Requiriments
+
+- Node.js
+- npm or yarn
+
+### Getting Started
+
+Clone this repositorie using
 
 ```bash
 git clone github.com/GuilhermeBalog/portfolio-generator.git
 ```
 
-And then open the `index.html` file, you can find it in the `portfolio-generator` folder
+Install dependencies with
 
-Feel free to fork this repositorie and add your ideas!
+```bash
+npm install #or
+yarn
+```
+
+And then run the development server
+
+```bash
+npm start #or
+yarn start
+```
+> Feel free to fork this repositorie and add your ideias!
+
+*That's all folks! Keep coding!*
