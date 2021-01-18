@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 
-import './Portfolio.css'
-import profileIcon from '../assets/profile-icon.png'
+import styles from './_Portfolio.module.css'
 
-import api from '../services/api'
+import api from '../../services/api'
 
-import ProjectCard from '../components/ProjectCard'
+import ProjectCard from '../../components/ProjectCard'
 
-function Portfolio() {
+function Portfolio({ username }) {
     const [ projects, setProjects ] = useState([])
     const [ user, setUser ] = useState({})
-
-    let { username } = useParams()
 
     useEffect(() => {
         loadUser()
@@ -23,8 +19,8 @@ function Portfolio() {
 
             setUser(response.data)
             document.title = response.data.name
-        } 
-        
+        }
+
         async function loadProjects(){
             const response = await api.get(`/users/${username}/repos`)
 
@@ -33,10 +29,10 @@ function Portfolio() {
     }, [username])
 
     return (
-        <div id="app">
+        <div className={styles.app}>
 
             <header>
-                <img id="avatar" alt="profile" src={user.avatar_url || profileIcon} />
+                <img id="avatar" alt="profile" src={user.avatar_url || '/profile-icon.png'} />
                 <div className="title">
                     <h1 id="name">{user.name || user.login || "John Dev"}</h1>
                 </div>
@@ -52,7 +48,7 @@ function Portfolio() {
             {projects.length > 0 &&
             <section>
                 <h3>Projects</h3>
-                <div className="projects">
+                <div className={styles.projects}>
                     {projects.map(project => (
                         !project.fork &&
                         <ProjectCard project={project} key={project.name} />
@@ -65,3 +61,7 @@ function Portfolio() {
 }
 
 export default Portfolio
+
+export function getServerSideProps({ params }){
+    return { props: { username: params.username} }
+}

@@ -7,6 +7,6 @@
     box-sizing: border-box;
 }
 
-html, body, #root{
+html, body, #_next{
     height: 100%;
 }

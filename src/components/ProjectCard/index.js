@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import style from './style.module.css'
 
 function ProjectCard({ project }){
     function snakeToCapitalize(text){
@@ -13,22 +13,22 @@ function ProjectCard({ project }){
             }
 
             const firstLetter = word.charAt(0)
-            
+
             const wordWithoutFirstLetter = word.slice(1)
-    
+
             const capitalizedWord = firstLetter.toLocaleUpperCase().concat(wordWithoutFirstLetter)
-    
+
             return capitalizedWord
         })
-        
+
         return capitalizedWords.join(' ')
     }
 
     return (
-        <div className="project-card">
+        <div className={style["project-card"]}>
             <h4><a href={project.html_url} target="_blank" rel="noopener noreferrer">{snakeToCapitalize(project.name)}</a></h4>
-            <p className="project-description">{project.description}</p>
-            <p className="project-language">{project.language}</p>
+            <p className={style["project-description"]}>{project.description}</p>
+            <p className={style["project-language"]}>{project.language}</p>
         </div>
     )
 }

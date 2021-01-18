@@ -1,21 +1,23 @@
 import React, { useState } from 'react'
-import './Login.css'
+import { useRouter } from 'next/router'
+import styles from './_Login.module.css'
 
-function Login({ history }){
+function Login(){
     const [username, setUsername] = useState('')
+    const router = useRouter()
 
     function handleSubmit(event){
         event.preventDefault()
 
-        history.push(`/portfolio/${username}`)
+        router.push(`/portfolio/${username}`)
     }
 
     return (
-        <div id="login">
+        <div className={styles.login}>
             <form onSubmit={handleSubmit}>
                 <h1>Portfolio Generator</h1>
-                <h2>By <a href="https://guilhermebalog.github.io">Guilherme Balog</a></h2>
-                <input 
+                <h2>By <a href="https://guilhermebalog.ga">Guilherme Balog</a></h2>
+                <input
                     placeholder="Type your Github username"
                     value={username}
                     onChange={event => setUsername(event.target.value)}
