@@ -7,18 +7,18 @@ I made it based on github page check it [here](https://guilhermebalog.github.io)
 
 [Open the website](http://balogportfoliogenerator.herokuapp.com/) and type your github username
 
-> Pro tip: you can type the username in the url `/portfolio/USERNAME`
+> Pro tip: you can type the username in the url `/?u=YOUR_USERNAME`
 
 ## Contributing
 
-### Requiriments
+### Requirements
 
 - Node.js
 - npm or yarn
 
 ### Getting Started
 
-Clone this repositorie using
+Clone this repositorY using
 
 ```bash
 git clone github.com/GuilhermeBalog/portfolio-generator.git
@@ -37,6 +37,6 @@ And then run the development server
 npm start #or
 yarn start
 ```
-> Feel free to fork this repositorie and add your ideias!
+> Feel free to fork this repository and add your ideias!
 
 *That's all folks! Keep coding!*

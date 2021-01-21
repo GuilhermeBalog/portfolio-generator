@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import styles from './_Login.module.css'
+import Portfolio from '../components/Portfolio'
+import Head from 'next/head'
 
 function Login(){
     const [username, setUsername] = useState('')
@@ -9,11 +11,17 @@ function Login(){
     function handleSubmit(event){
         event.preventDefault()
 
-        router.push(`/portfolio/${username}`)
+        router.push(`/?u=${username}`)
     }
+
+    if(router.query.u) return <Portfolio username={router.query.u} />
 
     return (
         <div className={styles.login}>
+            <Head>
+                <title>Portfolio Generator by Guilherme Balog</title>
+            </Head>
+
             <form onSubmit={handleSubmit}>
                 <h1>Portfolio Generator</h1>
                 <h2>By <a href="https://guilhermebalog.ga">Guilherme Balog</a></h2>

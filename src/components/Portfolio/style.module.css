@@ -25,6 +25,16 @@
   font-weight: 500;
 }
 
+.app > div {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.app > div a {
+  font-weight: 500;
+  color: inherit;
+}
+
 .app header {
   padding: 1em 0;
   display: flex;
@@ -82,7 +92,7 @@
 @media (min-width: 600px) {
   .app header {
     justify-content: flex-start;
-    padding-top: 3em;
+    /* padding-top: 3em; */
     flex-direction: row;
   }
   .app header h1,

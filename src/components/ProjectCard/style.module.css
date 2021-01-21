@@ -1,41 +1,41 @@
-.project-card{
-    border-radius: 25px;
-    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.25);
-    background-color: #ffffff;
+.project-card {
+  border-radius: 25px;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
 }
 
-.project-image{
-    width: 100%;
-    border-radius: 25px 25px 0 0 ;
+.project-image {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
 }
 
-.project-card h4{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.563em;
-    font-weight: bold;
-    margin: 0.5em 0.5em 1em 0.5em;
+.project-card h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.563em;
+  font-weight: bold;
+  margin: 0.5em 0.5em 1em 0.5em;
 }
 
-.project-card a{
-    color: #000000;
+.project-card a {
+  color: #000000;
 }
 
-.project-card p{
-    margin: 0.5em 0.5em 1em 0.7em;
+.project-card p {
+  margin: 0.5em 0.5em 1em 0.7em;
 }
 
-.project-description{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    font-weight: 300; /* light */
+.project-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 300; /* light */
 }
 
-.project-language{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100; /* thin */
+.project-language {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; /* thin */
 }
 
-.project-repo{
-    display: flex;
-    align-items: center;
+.project-repo {
+  display: flex;
+  align-items: center;
 }
