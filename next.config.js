@@ -1,3 +1,3 @@
 module.exports = {
-  basePath: '/portfolio-generator',
+  basePath: process.env.NODE_ENV !== 'development'? '/portfolio-generator' : '',
 }

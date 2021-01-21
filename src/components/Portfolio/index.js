@@ -7,6 +7,7 @@ import styles from './style.module.css'
 import ProjectCard from '../ProjectCard'
 import api from '../../services/api'
 
+import { basePath } from '../../../next.config'
 
 function Portfolio({ username }) {
     const router = useRouter()
@@ -60,7 +61,7 @@ function Portfolio({ username }) {
                 <img
                     id="avatar"
                     alt="profile"
-                    src={user.avatar_url || '/profile-icon.png'}
+                    src={user.avatar_url || `${basePath}/profile-icon.png`}
                 />
                 <div className="title">
                     <h1 id="name">
