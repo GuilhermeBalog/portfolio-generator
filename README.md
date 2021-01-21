@@ -1,13 +1,13 @@
 # Portfolio Generator
 
 Create a portfolio using your GitHub repositories!
-I made it based on github page check it [here](https://guilhermebalog.github.io)!
+I made it based on my personal website, you can check it [here.](https://guilhermebalog.ga)!
 
 ## Usage
 
-[Open the website](http://balogportfoliogenerator.herokuapp.com/) and type your github username
+[Open the website](https://guilhermebalog.ga/portfolio-generator/) and type your github username
 
-> Pro tip: you can type the username in the url `/?u=YOUR_USERNAME`
+> Pro tip: you can type the username directly in the url `/?u=YOUR_USERNAME`
 
 ## Contributing
 
@@ -18,7 +18,7 @@ I made it based on github page check it [here](https://guilhermebalog.github.io)
 
 ### Getting Started
 
-Clone this repositorY using
+Clone this repository using
 
 ```bash
 git clone github.com/GuilhermeBalog/portfolio-generator.git
