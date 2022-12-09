@@ -1,11 +1,11 @@
 # Portfolio Generator
 
 Create a portfolio using your GitHub repositories!
-I made it based on my personal website, you can check it [here.](https://guilhermebalog.ga)!
+I made it based on my personal website, you can check it [here.](https://guilhermebalog.github.io)!
 
 ## Usage
 
-[Open the website](https://guilhermebalog.ga/portfolio-generator/) and type your github username
+[Open the website](https://guilhermebalog.github.io/portfolio-generator/) and type your github username
 
 > Pro tip: you can type the username directly in the url `/?u=YOUR_USERNAME`
 

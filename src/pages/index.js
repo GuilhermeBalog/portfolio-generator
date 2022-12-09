@@ -24,7 +24,7 @@ function Login(){
 
             <form onSubmit={handleSubmit}>
                 <h1>Portfolio Generator</h1>
-                <h2>By <a href="https://guilhermebalog.ga">Guilherme Balog</a></h2>
+                <h2>By <a href="https://guilhermebalog.github.io">Guilherme Balog</a></h2>
                 <input
                     placeholder="Type your Github username"
                     value={username}

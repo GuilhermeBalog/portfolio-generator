@@ -2,7 +2,7 @@
   "name": "portfolio-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://guilhermebalog.ga/portfolio-generator/",
+  "homepage": "https://guilhermebalog.github.io/portfolio-generator/",
   "dependencies": {
     "axios": "^0.21.1",
     "next": "^10.0.5",
